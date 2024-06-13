@@ -41,3 +41,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 # Trivia
 - The name of the project comes from applying rot13 to `avilatek-prueba-tecnica`
+- I spent 2 hours setting up a silly Github Action to run `eslint` and auto merge a PR to main.
