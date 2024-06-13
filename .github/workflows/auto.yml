@@ -35,16 +35,15 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             console.log(github.pulls);
-            const newBranch = `auto-merge-${new Date().getTime()}`;
             const pr = await github.rest.pulls.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: 'Auto merge by robot',
-              head: newBranch,
+              title: `Auto merge by robot on ${new Date().toISOString()}`,
+              head: 'dev',
               base: 'main',
             });
             console.log(pr.data.number);
-            await github.pulls.merge({
+            await github.rest.pulls.merge({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: pr.data.number,
