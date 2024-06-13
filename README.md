@@ -1,4 +1,4 @@
-[![wakatime](https://wakatime.com/badge/user/d89483f8-cca1-4552-959c-d08ef54a185b/project/0c7980bf-e140-444a-b153-549a8aba8cb6.svg)](https://wakatime.com/badge/user/d89483f8-cca1-4552-959c-d08ef54a185b/project/0c7980bf-e140-444a-b153-549a8aba8cb6)
+[![wakatime](https://wakatime.com/badge/github/ruvasqm/nivyngrx-cehron-grpavpn.svg)](https://wakatime.com/badge/github/ruvasqm/nivyngrx-cehron-grpavpn)
 ---
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
