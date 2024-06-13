@@ -5,17 +5,20 @@ on:
     branches:
       - dev
 
+
 jobs:
   auto-merge:
     name: Auto Merge
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: 21
 
@@ -26,20 +29,20 @@ jobs:
         run: npm run lint
 
       - name: Create PR
-        uses: actions/github-script@v4
+        uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const newBranch = `auto-merge-${new Date().getTime()}`;
-            const pr = await github.pulls.create({
+            console.log(github.pulls);
+            const pr = await github.rest.pulls.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: 'Auto merge',
-              head: newBranch,
+              title: `Auto merge by robot on ${new Date().toISOString()}`,
+              head: 'dev',
               base: 'main',
             });
             console.log(pr.data.number);
-            await github.pulls.merge({
+            await github.rest.pulls.merge({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: pr.data.number,
