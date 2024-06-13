@@ -39,7 +39,7 @@ jobs:
             const pr = await github.rest.pulls.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: 'Auto merge',
+              title: 'Auto merge by robot',
               head: newBranch,
               base: 'main',
             });
