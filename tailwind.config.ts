@@ -35,6 +35,9 @@ const config: Config = {
         "utility": {
           "brand": "#6941C6",
         },
+        "icon": {
+          "border": "#EAECF0"
+        },
         "brand": {
           "section": "#53389E",
         },
