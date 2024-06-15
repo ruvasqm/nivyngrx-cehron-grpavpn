@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Integrations from "./integration";
+import Link from "next/link";
+import FeatureCard from "./featureCard";
+import Features from "./features";
+import Ctas from "./ctaImg";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <section className="flex flex-col items-center gap-16 lg:pt-8 lg:pb-24 w-full">
+      <section id="hero" className="flex flex-col items-center gap-16 lg:pt-8 lg:pb-24 w-full">
         <div className="flex flex-col items-center w-full gap-8 ">
           <div className="flex flex-col items-center gap-10 lg:gap-8 lg:rounded-3xl pt-16 lg:pt-24 pb-24 lg:pb-48 lg:px-28 xl:px-56 bg-brand-section w-full">
             <div className="flex flex-col items-center gap-4 lg:gap-6 w-fit p-4">
@@ -42,22 +46,55 @@ export default function Home() {
             </form>
           </div>
         </div>
-      </section>
-      <section className="flex flex-col items-center py-16 lg:pb-24 gap-12 lg:gap-24 w-full">
+      </section >
+      <section id="integrations" className="flex flex-col items-center py-16 lg:pb-24 gap-12 lg:gap-24 w-full">
         <div className="flex flex-col px-4 lg:px-8 gap-8">
-          <div className="flex flex-col gap-8 lg:px-56">
-            <div className="flex flex-col gap-5">
-              <div className="flex flex-col gap-4">
-                <h2 className="text-3xl lg:text-4xl font-semibold text-center text-primary">
-                  Get more value from your tools
-                </h2>
-              </div>
-              <p className="text-center text-tertiary font-normal text-lg">
-                Connect your tools, connect your teams. With over 100 apps already available in our directory, your team’s favourite tools are just a click away.
+          <FeatureCard pillText="Integrations" title="Get more value from your tools" description="Connect your tools, connect your teams. With over 100 apps already available in our directory, your team’s favourite tools are just a click away." />
+          <Integrations />
+        </div>
+      </section>
+      <section id="cta" className="flex flex-col items-center py-16 lg:pb-24 gap-12 lg:gap-24 w-full">
+        <div className="flex flex-col md:flex-row items-center rounded-3xl bg-brand-section w-full justify-between">
+          <div className="flex flex-col items-start  p-16 gap-8 lg:gap-12 ">
+            <div className="flex flex-col gap-5 lg:gap-5">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-tertiary-brand">
+                Give us a shot
+              </h2>
+              <p className="text-center text-tertiary-brand font-normal lg:text-xl">
+                Join over 4,000 startups already growing with Untitled.
               </p>
             </div>
+            <div className="flex flex-col lg:flex-row gap-4">
+              <Link href="/resources" className="text-secondary-fg border-secondary-border px-4 py-2.5 gap-1.5 rounded-lg border font-semibold text-base hover:text-primary-fg hover:bg-primary-bg bg-secondary-bg">
+                Learn more
+              </Link>
+              <Link href="/pricing" className="text-primary-fg bg-primary-bg px-4 py-2.5 gap-1.5 rounded-lg border border-primary-bg font-semibold text-base hover:text-primary-bg hover:bg-primary-fg">
+                Get started
+              </Link>
+            </div>
           </div>
-            <Integrations />
+          <Image className="rounded-r-3xl" src="/cta.png" width={480} height={400} alt="hero" />
+        </div>
+      </section>
+      <section id="features" className="flex flex-col items-center py-16 lg:pb-24 gap-12 lg:gap-24 w-full">
+        <div className="flex flex-col items-center gap-8 lg:gap-16">
+          <FeatureCard pillText="Features" title="Cutting-edge features for advanced analytics" description="Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups." />
+        </div>
+        <Features />
+      </section>
+      <section id="cta2" className="flex flex-col items-center py-16 lg:pb-24 gap-12 lg:gap-24 w-full">
+        <div className="flex flex-col md:flex-row items-center rounded-3xl w-full lg:py-8 py-16 gap-16">
+          <div className="flex flex-col items-start gap-8 lg:gap-12">
+            <div className="flex flex-col items-start gap-5 lg:gap-6">
+              <h2 className="text-5xl text-primary font-semibold">No long-term contracts</h2>
+              <p className="text-xl text-tertiary font-normal">Start your 30-day free trial today.</p>
+            </div>
+            <div className="flex flex-col lg:flex-row gap-5">
+              <Link className="text-secondary-fg border-secondary-border px-4 py-2.5 gap-1.5 rounded-lg border font-semibold text-base hover:text-primary-fg hover:bg-primary-bg bg-secondary-bg" href="/resources">Learn more</Link>
+              <Link className="text-primary-fg bg-primary-bg px-4 py-2.5 gap-1.5 rounded-lg border border-primary-bg font-semibold text-base hover:text-primary-bg hover:bg-primary-fg" href="/pricing">Get started</Link>
+            </div>
+          </div>
+          <Ctas />
         </div>
       </section>
     </main >
