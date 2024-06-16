@@ -97,6 +97,9 @@ export default function Home() {
           <Ctas />
         </div>
       </section>
+      <section id="faq" className="flex flex-col items-center py-16 lg:pb-24 gap-12 lg:gap-24 w-full">
+      <FeatureCard title="Frequently asked questions" description="Everything you need to know about the product and billing." />
+        </section>
     </main >
   );
 }
