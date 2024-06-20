@@ -19,14 +19,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <SessionProvider>
+    //<SessionProvider>
       <html lang="en">
         <body className={`${inter.className} flex-column md:px-20`}>
           <Navbar />
           {children} <SpeedInsights />{" "}
         </body>
       </html>
-    </SessionProvider>
+    //</SessionProvider>
   );
 }
 
