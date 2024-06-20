@@ -1,44 +1,33 @@
 [![wakatime](https://wakatime.com/badge/github/ruvasqm/nivyngrx-cehron-grpavpn.svg)](https://wakatime.com/badge/github/ruvasqm/nivyngrx-cehron-grpavpn)
 ---
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Prueba técnica
 
-## Getting Started
+## Frontend
 
-First, run the development server:
+### Technical decisions
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Nextjs + Tailwind + Vercel hosting : [site](https://nivyngrx-cehron-grpavpn.ruvasq.me/)
+- Tailwind customizations based on original design
+- Simple animations for Hero and 5-item gallery (not implemented)
+- Responsive design for all screen sizes (unfinished)
+- Favicons
+- [Og Image](https://og-image.vercel.app/) for social media sharing (not implemented)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Backend
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Technical decisions
+- Reuse of the same Nextjs project for the backend
+- [Next](https://next-auth.js.org/getting-started/example) Auth for authentication (unfinished)
+- [Prisma](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres) and [Vercel](https://vercel.com/guides/deploying-nextjs-prisma-to-vercel) for database and deployment (not implemented)
+- [Swagger](https://github.com/jellydn/next-swagger-doc) and JSDOC for documentation (not implemented)
+- [Jest](https://jestjs.io/docs/getting-started) for testing (not implemented)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
+## Devops
+- Github action for auto merge/PR and eslint (completed)
+- Github action for testing (not implemented)
 ---
 
 # Trivia
 - The name of the project comes from applying rot13 to `avilatek-prueba-tecnica`
 - I spent 2 hours setting up a silly Github Action to run `eslint` and auto merge a PR to main.
+- I'm quite sorry for not finishing the project, I had a lot of fun with it though, next 14 is great!

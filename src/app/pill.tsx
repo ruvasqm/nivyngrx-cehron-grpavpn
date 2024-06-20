@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const pill = ({ text }: { text: string }) => {
+const pill = ({text}: {text: string}) => {
   return (
-    <div className="rounded-full w-fit border py-1 px-3 border-utility-brand text-utility-brand text-sm font-medium">
+    <div className="w-fit rounded-full border border-utility-brand px-3 py-1 text-sm font-medium text-utility-brand">
       <span>{text}</span>
     </div>
-  )
-}
+  );
+};
 
-export default pill
+export default pill;

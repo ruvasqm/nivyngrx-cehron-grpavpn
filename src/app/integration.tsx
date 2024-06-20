@@ -1,13 +1,15 @@
-import React from 'react'
-import fs from 'fs'
-import IconCard from './iconCard'
+import React from "react";
+import fs from "fs";
+import IconCard from "./iconCard";
 
 const integration = async () => {
-  'use server'
+  "use server";
   // find svg that start with 'int-'
-  const files = fs.readdirSync(process.cwd() + '/public')
-  const integrations = files.filter(file => file.startsWith('int-'))
-  const cleanIntegrations = integrations.map(integration => integration.replace('int-', '').replace('.svg', '').replace(/-/g, ' '))
+  const files = fs.readdirSync(process.cwd() + "/public");
+  const integrations = files.filter((file) => file.startsWith("int-"));
+  const cleanIntegrations = integrations.map((integration) =>
+    integration.replace("int-", "").replace(".svg", "").replace(/-/g, " ")
+  );
   return (
     // instead of a flex div I need a grid, 1 column mobile, 3 desktop
     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -25,7 +27,7 @@ const integration = async () => {
         />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default integration
+export default integration;
